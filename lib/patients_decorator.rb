@@ -37,7 +37,7 @@ class XrayDecorator < PatientDecorator
   def initialize(basic_patient)
     super(basic_patient)
     @extra_cost = 95.0
-    @description = "Xray (X Radiation)"
+    @description = "X-ray"
   end
 end # end XrayDecorator class
 
