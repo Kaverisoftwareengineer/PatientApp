@@ -23,13 +23,16 @@
         <td><%= patient.address %></td>
         <td><%= patient.cost %></td>
         <td><%= link_to 'Show', patient %></td>
+        <% if user_signed_in? %>
         <td><%= link_to 'Edit', edit_patient_path(patient) %></td>
         <td><%= link_to 'Destroy', patient, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
+<% if user_signed_in? %>
 <%= link_to 'New Patient', new_patient_path %>
+<% end %>
