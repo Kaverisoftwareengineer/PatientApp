@@ -20,7 +20,7 @@ class PatientDecorator < BasicPatient
     @basic_patient = basic_patient
     super(@basic_patient.cost)
     @extra_cost = 0
-    @requests = "No consultation fees this time" 
+    @requests = "No consultation fees this time"
   end
 
   def cost
@@ -28,7 +28,7 @@ class PatientDecorator < BasicPatient
  end
 
   def details
-    return @description + ": " + @basic_patient.details + ". " + "#{@extra_cost}"
+    return @description + ": " + "#{@extra_cost}" + ". " + @basic_patient.details
   end
 
 end #end the PatientDecorator class
