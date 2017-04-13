@@ -11,7 +11,7 @@ class BasicPatient
 
   # a method which returns a string representation of the object of type BasicPatientSummary
   def details
-    return @description + "; " + "#{@cost}"
+    return @description + ": " + "#{@cost}"
   end
 end # end the PatientSummary class
 
@@ -36,7 +36,7 @@ end #end the PatientDecorator class
 class XrayDecorator < PatientDecorator
   def initialize(basic_patient)
     super(basic_patient)
-    @extra_cost = 95
+    @extra_cost = 95.0
     @description = "Xray (X Radiation)"
   end
 end # end XrayDecorator class
@@ -44,7 +44,7 @@ end # end XrayDecorator class
 class MriDecorator < PatientDecorator
   def initialize(basic_patient)
     super(basic_patient)
-    @extra_cost = 125
+    @extra_cost = 125.0
     @description = "MRI"
   end
 end # end MriDecorator class
@@ -52,7 +52,7 @@ end # end MriDecorator class
 class BloodDecorator < PatientDecorator
   def initialize(basic_patient)
     super(basic_patient)
-    @extra_cost = 30
+    @extra_cost = 30.0
     @description = "Bloods"
   end
 end # end BloodDecorator class

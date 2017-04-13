@@ -28,7 +28,7 @@ class PatientsController < ApplicationController
     @patient = Patient.new()
     @patient.firstname = params[:patient][:firstname]
     @patient.lastname = params[:patient][:lastname]
-    @patient.phone_number = params[:patient][:phonenumber]
+    @patient.phone_number = params[:patient][:phone_number]
     @patient.address = params[:patient][:address]
     @patient.cost = params[:patient][:cost]
 
